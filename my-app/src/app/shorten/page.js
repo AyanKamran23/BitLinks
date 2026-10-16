@@ -36,7 +36,7 @@ const shorten = () => {
                
                 
                 const generateCode = data.shorturl || shorturl;
-                setresultlink(`http://localhost:3000/${generateCode}`);
+                setresultlink(`${process.env.NEXT_PUBLIC_HOST}/${generateCode}`);
 
                 localStorage.setItem("savedShortCode", generateCode)
             } else {
